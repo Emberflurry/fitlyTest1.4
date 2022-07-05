@@ -1,0 +1,206 @@
+/* Default link colours */
+a {
+    color: #0275d8 !important
+}
+
+a:hover {
+    color: #014c8c !important
+}
+
+
+#header a, #sidebar a {
+    color: white !important;
+}
+
+#header, #sidebar {
+    color: white
+}
+
+#header h1 {
+    margin-bottom: 0;
+    line-height: inherit;
+}
+
+#sidebar {
+    height: 100vh
+}
+
+.nav-item {
+    font-size: 1.1em
+}
+
+.nav-link.active, .nav-link:hover {
+    text-decoration: underline
+}
+
+.brand i, .nav-link i {
+    padding: 0 0.5rem
+}
+
+.brand a:hover {
+    text-decoration: none
+}
+
+
+/*
+ * loading spinners
+ */
+
+
+/* This loader will hide the component and add a spinner after 1 second */
+*[data-dash-is-loading="true"].loader {
+    transition-delay: 1s;
+    transition-property: visibility;
+    visibility: hidden;
+}
+
+
+/* This loader will fade the component and add a spinner after 1 second */
+*[data-dash-is-loading="true"].loader-fade {
+    transition-delay: 1s;
+    transition-property: opacity;
+    transition-duration: 1s;
+    opacity: 0.6;
+}
+
+
+/* the spinner animation */
+@keyframes spinner {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+
+/* Animation that makes elements visible sharply at end of animation */
+@keyframes offset {
+    from {
+        visibility: hidden;
+    }
+    99% {
+        visibility: hidden;
+    }
+    to {
+        visibility: visible;
+    }
+}
+
+
+*[data-dash-is-loading="true"].loader::before,
+*[data-dash-is-loading="true"].loader-fade::before {
+    z-index: 9999;
+    visibility: visible;
+    content: '';
+    box-sizing: border-box;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 30px;
+    height: 30px;
+    margin-top: -10px;
+    margin-left: -10px;
+    border-radius: 50%;
+    border: 2px solid #999;
+    border-top-color: #222;
+    /* Wait for 1s before displaying spinner using 'offset' anomation This
+       avoids flickering when wait times are low. */
+    animation: offset 1s, spinner .6s linear infinite;
+}
+
+
+/* Font Awesome Icons */
+.fa, .fas {
+    color: #aaa;
+    background: rgba(0, 0, 0, 0) !important;
+}
+/* Dash Charts */
+.main-svg {
+    background: rgba(0, 0, 0, 0) !important;
+}
+
+/* Dash Components */
+.fsmTNM {
+    width: 0 !important;
+}
+.eMfdXL {
+    width: 0 !important;
+}
+.gJuplL, .cmSQpo {
+    padding-left: 0% !important;
+    padding-right: 0% !important;
+    margin-right: 0% !important;
+    margin-left: 0% !important;
+}
+.selector-rect{
+    fill: rgb(66,66,66) !important;
+}
+.rangeslider-bg, .rangeslider-mask-min, .rangeslider-mask-max{
+    fill-opacity: .25 !important;
+}
+
+.DateInput_input {
+    height: calc(1.5em + 0.5rem + 2px);
+    padding: 0.25rem 0.5rem;
+    font-size: 0.8203125rem;
+    line-height: 1.5;
+    border-radius: 0.2rem;
+    text-align: center;
+    font-weight: 400;
+ }
+
+/* Dash Table */
+
+.dash-cell column-0 cell--selected focused{
+    border-bottom: #3fcbeb !important;
+}
+
+.dash-delete-cell{
+    width: 3vw !important;
+}
+
+.dash-table-container .dash-spreadsheet-container .dash-spreadsheet-inner table{
+    --hover: rgb(66,66,66) !important;
+}
+
+.dash-table-container .dash-spreadsheet-container .dash-spreadsheet-inner input:not([type=radio]):not([type=checkbox]){
+    text-align: center !important;
+    color: rgb(255,255,255) !important;
+}
+
+/* Webkit /
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+::-webkit-scrollbar {
+    -webkit-appearance: none;
+    width: .4rem;
+    height: .4rem;
+}
+
+::-webkit-scrollbar-track {
+    background-color: rgba(0, 0, 0, 0);
+}
+
+::-webkit-scrollbar-thumb {
+    border-radius: 0.3rem;
+    background-color: rgba(0, 0, 0, .5);
+    -webkit-box-shadow: 0 0 1px rgba(255, 255, 255, .5);
+}
+
+/* Other */
+.contributorright {
+    float: right;
+    margin-bottom: 0;
+    font-size: .75rem;
+}
+
+.contributorleft {
+    float: left;
+    margin-bottom: 0;
+    font-size: .75rem;
+}
+
+.contentbutton {
+    padding-top: 0%;
+    padding-bottom: 0%;
+    padding-left: 0%;
+    padding-right: 0%;
+}
